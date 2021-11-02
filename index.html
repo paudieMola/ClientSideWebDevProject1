@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<HTML lang = "EN-US">
+	<HEAD>
+		<style>@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");</style>
+		<META charset="UTF-8">
+		<META name="viewport" content="width=device-width, initial-scale=1.0">
+		<LINK rel="stylesheet" type="text/css" href="style.css">
+		<!-- Add JavaScript to make the page interactive -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="RPS.js"></script>
+		<title>The Rock Paper Scissors Game</title>
+	</HEAD>
+	<BODY>
+		<HEADER>
+			<h1>THE ROCK PAPER SCISSORS</h1>
+		</HEADER>
+		<!-- Modal to deal with signin. Not fully working yet. Used bootstrap style and I know they should not be divs but I left them that way -->
+			<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up/Sign In</button>
+				 <div id="id01" class="modal">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+					<form class="modal-content animate">
+						<div class="container">
+							<label><b>Email</b></label>
+							<input type="text" placeholder="Enter Email" name="email" required>
+							<label><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required>
+							<div class="clearfix">
+								<button type="submit" class="signupbtn">Sign Up</button>
+								<button class="signinbtn">Sign In</button>
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+							</div>
+						</div>
+					</form>
+				</div>
+		<MAIN>
+			<section id="inst">
+				<H2>Beat the machine. Choose your Rock</H2>
+			</section>                  
+			<section id="choices">
+			<!-- These images are sprites so I purposefully left out ALT tags -->
+				<p class="content">
+					<img class="rock">
+				</p>
+				<p class="content">
+					<img class="paper">
+				</p>
+				<p class="content">
+					<img class="scissors">
+				</p>
+			</section>
+			<section id="scoreboard">
+				<div class = "player">
+				  Your Score: <div class = "usersCount">0</div>
+				</div>
+				<div class = "machine">
+						  The Rocks Score: <div class = "rocksCount">0</div>
+				</div>
+			</section>
+		</MAIN>
+	</BODY>
+</HTML>

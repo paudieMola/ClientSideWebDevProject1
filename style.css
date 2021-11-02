@@ -1,0 +1,195 @@
+@font-face
+{
+	font-family: 'Indie Flower', cursive;
+}
+
+header, main{
+  font-family: 'Indie Flower', cursive;
+  text-align : center;
+}
+
+img.responsiveimage{
+	max-width : 100%;
+	height : auto;
+}
+
+header h1 {
+	letter-spacing : 15px;
+	background: linear-gradient(180deg, blue, grey);
+	padding : 20px;
+}
+
+main h1{
+  text-align : center;
+  color: red;
+}
+
+Main h2 {
+	font-size : 30px;
+	color : navy;
+}
+
+main, #choices, #scoreboard{
+	display : flex;
+  flex-flow: row wrap;
+}
+
+#choices, #scoreboard{
+  flex-basis: 100%;
+  justify-content: space-around;
+  font-size: 25px;
+}
+
+p.content{
+	border-style : solid;
+	border-width : 3px;
+	border-color : lightgrey;
+	margin : 10px;
+	min-height : 80px;
+	min-width: 102px;
+	box-shadow : 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
+	transition-duration : 0.5s;
+	-webkit-transition-duration : 0.5s;
+}
+
+p.content:hover{
+	box-shadow : 2px 3px 3px 2px rgba(3, 46, 92, 0.8);
+}
+
+.player, .machine{
+	border-style : solid;
+	border-width : 1px;
+	border-color : black;
+	background: lightgrey;
+	margin : 10px;
+	min-height : 80px;
+	min-width: 150px;
+	font-size: 25px;
+	box-shadow : 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
+	border-radius: 25px;
+}
+
+.rock, .paper, .scissors{
+	background: url(sprites.jpg) no-repeat;
+}
+
+.rock{
+	background-position: 0px 0px ;
+	width: 111px;
+	height: 138px;
+}
+
+.paper{
+	background-position: -111px 0px;
+	width: 111px;
+	height: 138px;
+}
+
+.scissors{
+	background-position: -222px 0px;
+	width: 111px;
+	height: 138px;
+}
+
+#inst{
+  flex-basis : 100%;
+}
+#scoreboard{
+  flex-basis: 100%;
+}
+
+/*These are imported for the modal add full-width input fields*/
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+    button {
+        background-color: green;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+    }
+    /*set styles for the cancel button*/
+    .cancelbtn {
+        padding: 14px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+    .cancelbtn,
+	.signinbtn,
+    .signupbtn {
+        float: left;
+        width: 30%
+    }
+    /*add padding to container elements*/
+    .container {
+        padding: 16px;
+    }
+    /*define the modal’s background*/
+     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 60px;
+    }
+    /*define the modal-content background*/
+     
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    /*define the close button*/
+     
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 15px;
+        color: #000;
+        font-size: 40px;
+        font-weight: bold;
+    }
+    /*define the close hover and focus effects*/
+     
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+     
+@media screen and (max-width: 300px) {
+        .cancelbtn,
+		.signinbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+
+@media (max-width : 600px)
+{
+	header h1{
+	font-size : 25px;
+	}
+}
